@@ -4,7 +4,7 @@
 //
 //  Created by divine on 8/19/17.
 //  Copyright © 2017 divine ikenna. All rights reserved.
-//  Special Thanks to Nate Cook
+//  Special Thanks to Nate Cook & Rob Napier.
 //
 
 import Foundation
@@ -41,6 +41,20 @@ extension Int {
         } while value < minValue
         
         return value % limit
+    }
+}
+
+extension MutableCollection where Indices.Iterator.Element == Index {
+    fileprivate mutating func shuffle() {
+        let c = count
+        guard c > 1 else { return }
+        
+        for (first, ucount) in zip(indices, stride(from: c, to: 1, by: -1)) {
+            let d : IndexDistance = numericCast(Int.getRandomInt(betweenZeroAnd: numericCast(ucount)))
+            guard d != 0 else { continue }
+            let i = index(first, offsetBy: d)
+            swap(&self[first], &self[i])
+        }
     }
 }
 
