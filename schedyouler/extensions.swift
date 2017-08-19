@@ -11,6 +11,7 @@ import Foundation
 
 /* TODO: Update for Swift 4 */
 
+/* Pseudo-randum number generation */
 extension Integer {
     fileprivate static func getRandomInteger() -> Self {
         var result: Self = 0
@@ -44,6 +45,7 @@ extension Int {
     }
 }
 
+/* Array Shuffling Functionality */
 extension MutableCollection where Indices.Iterator.Element == Index {
     fileprivate mutating func shuffle() {
         let c = count
