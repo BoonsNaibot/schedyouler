@@ -23,3 +23,24 @@ extension Integer {
     }
 }
 
+extension Int {
+    static func getRandomInt(betweenZeroAnd limit: Int) -> Int {
+        assert(limit > 0)
+        
+        // Convert our range from [0, Int.max) to [Int.max % limit, Int.max)
+        // This way, when we later % limit, there will be no bias
+        let minValue = Int.max % limit
+        
+        var value = 0
+        
+        // Keep guessing until we're in the range.
+        // In theory this could loop forever. It won't. A couple of times at worst
+        // (mostly because we'll pick some negatives that we'll throw away)
+        repeat {
+            value = getRandomInteger()
+        } while value < minValue
+        
+        return value % limit
+    }
+}
+
