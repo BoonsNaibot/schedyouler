@@ -65,3 +65,11 @@ extension Sequence {
         return result
     }
 }
+
+extension Date {
+    var weekDay : Int {
+        let nsCal = Calendar.current
+        var newDateComponents = nsCal.dateComponents([Calendar.Component.weekday], from: self)
+        return newDateComponents.weekday!
+    }
+}
