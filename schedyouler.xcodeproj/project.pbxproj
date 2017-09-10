@@ -12,6 +12,7 @@
 		8A077ED41F48A2F30013E4FC /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 8A077ED31F48A2F30013E4FC /* Assets.xcassets */; };
 		8A077ED71F48A2F30013E4FC /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8A077ED51F48A2F30013E4FC /* LaunchScreen.storyboard */; };
 		8A077EE01F48A4770013E4FC /* extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A077EDF1F48A4770013E4FC /* extensions.swift */; };
+		8A5AACC21F64C2870083CA62 /* SchedulingPageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A5AACC11F64C2870083CA62 /* SchedulingPageViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -22,6 +23,7 @@
 		8A077ED61F48A2F30013E4FC /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		8A077ED81F48A2F30013E4FC /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		8A077EDF1F48A4770013E4FC /* extensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = extensions.swift; sourceTree = "<group>"; };
+		8A5AACC11F64C2870083CA62 /* SchedulingPageViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SchedulingPageViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -56,6 +58,7 @@
 			children = (
 				8A077ECC1F48A2F30013E4FC /* AppDelegate.swift */,
 				8A077EDF1F48A4770013E4FC /* extensions.swift */,
+				8A5AACC11F64C2870083CA62 /* SchedulingPageViewController.swift */,
 				8A077EDE1F48A35E0013E4FC /* Supporting Files */,
 			);
 			path = schedyouler;
@@ -145,6 +148,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				8A077ECD1F48A2F30013E4FC /* AppDelegate.swift in Sources */,
+				8A5AACC21F64C2870083CA62 /* SchedulingPageViewController.swift in Sources */,
 				8A077EE01F48A4770013E4FC /* extensions.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
