@@ -27,6 +27,17 @@ class SchedulingPageViewController: UIPageViewController, UIPageViewControllerDa
         }
     }
     
+    override func viewDidLayoutSubviews() {
+        super.viewDidLayoutSubviews()
+        for view in self.view.subviews {
+            if view is UIScrollView {
+                view.frame = UIScreen.main.bounds
+            } else if view is UIPageControl {
+                view.backgroundColor = UIColor.clear
+            }
+        }
+    }
+    
     func pageViewController(_ pageViewController: UIPageViewController, viewControllerBefore viewController: UIViewController) -> UIViewController? {
         guard let viewControllerIndex = VCArr.index(of: viewController) else {
             return nil
@@ -41,9 +52,7 @@ class SchedulingPageViewController: UIPageViewController, UIPageViewControllerDa
     }
     
     func pageViewController(_ pageViewController: UIPageViewController, viewControllerAfter viewController: UIViewController) -> UIViewController? {
-        guard let viewControllerIndex = VCArr.index(of: viewController) else {
-            return nil
-        }
+        guard let viewControllerIndex = VCArr.index(of: viewController) else { return nil }
         
         let nextIndex = viewControllerIndex + 1
         
