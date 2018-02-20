@@ -10,9 +10,10 @@ import UIKit
 
 class SchedulingPageViewController: UIPageViewController, UIPageViewControllerDataSource, UIPageViewControllerDelegate {
     
-    var VCArr: [UIViewController] {
-        return [self.VCInstance(name: "VC1"), self.VCInstance(name: "VC2"), self.VCInstance(name: "VC3"), self.VCInstance(name: "VC4")]
-    }
+    var VCArr: [UIViewController] = [UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier: "VC1"),
+                UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier: "VC2"),
+                UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier: "VC3"),
+                UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier: "VC4")]
     
     private func VCInstance(name: String) -> UIViewController {
         return UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier: name)
@@ -27,38 +28,42 @@ class SchedulingPageViewController: UIPageViewController, UIPageViewControllerDa
         }
     }
     
-    override func viewDidLayoutSubviews() {
-        super.viewDidLayoutSubviews()
-        for view in self.view.subviews {
-            if view is UIScrollView {
-                view.frame = UIScreen.main.bounds
-            } else if view is UIPageControl {
-                view.backgroundColor = UIColor.clear
-            }
-        }
-    }
+//    override func viewDidLayoutSubviews() {
+//        super.viewDidLayoutSubviews()
+//        for view in self.view.subviews {
+//            if let scrollview = view as? UIScrollView {
+//                scrollview.frame = UIScreen.main.bounds
+//                //scrollview.contentSize = UIScreen.main.bounds.size
+//            } else if view is UIPageControl {
+//                view.backgroundColor = UIColor.clear
+//            }
+//        }
+//    }
     
     func pageViewController(_ pageViewController: UIPageViewController, viewControllerBefore viewController: UIViewController) -> UIViewController? {
         guard let viewControllerIndex = VCArr.index(of: viewController) else {
+            //print("guard1 failure, \(VCArr.index(of: viewController))")
             return nil
         }
         
         let previousIndex = viewControllerIndex - 1
         
-        guard previousIndex >= 0 else { return VCArr.last }
-        guard VCArr.count > previousIndex else { return nil }
-        
+        guard previousIndex >= 0 else { print("guard2 failure, \(previousIndex)"); return VCArr.last }
+        guard VCArr.count > previousIndex else { print("guard3 failure"); return nil }
+        print("viewControllerBefore")
         return VCArr[previousIndex]
     }
     
     func pageViewController(_ pageViewController: UIPageViewController, viewControllerAfter viewController: UIViewController) -> UIViewController? {
-        guard let viewControllerIndex = VCArr.index(of: viewController) else { return nil }
+        guard let viewControllerIndex = VCArr.index(of: viewController)
+            //else { print("guard4 failure, \(VCArr.index(of: viewController))"); return nil }
+            else {return nil }
         
         let nextIndex = viewControllerIndex + 1
         
-        guard nextIndex < 0 else { return VCArr.first }
-        guard VCArr.count > nextIndex else { return nil }
-        
+        guard nextIndex < 0 else { print("guard5 failure, \(nextIndex)"); return VCArr.first }
+        guard VCArr.count > nextIndex else { print("guard6 failure"); return nil }
+        print("viewControllerAfter")
         return VCArr[nextIndex]
     }
 

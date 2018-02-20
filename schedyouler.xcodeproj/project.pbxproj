@@ -13,6 +13,10 @@
 		8A077ED71F48A2F30013E4FC /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8A077ED51F48A2F30013E4FC /* LaunchScreen.storyboard */; };
 		8A077EE01F48A4770013E4FC /* extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A077EDF1F48A4770013E4FC /* extensions.swift */; };
 		8A5AACC21F64C2870083CA62 /* SchedulingPageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A5AACC11F64C2870083CA62 /* SchedulingPageViewController.swift */; };
+		8ABCF2B61F65E024002FB350 /* INeedToViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8ABCF2B51F65E024002FB350 /* INeedToViewController.swift */; };
+		8ABCF2B81F65E041002FB350 /* SometimeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8ABCF2B71F65E041002FB350 /* SometimeViewController.swift */; };
+		8ABCF2BA1F65E0B4002FB350 /* WhenViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8ABCF2B91F65E0B4002FB350 /* WhenViewController.swift */; };
+		8ABCF2BC1F65E0D5002FB350 /* ItWillTakeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8ABCF2BB1F65E0D5002FB350 /* ItWillTakeViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -24,6 +28,10 @@
 		8A077ED81F48A2F30013E4FC /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		8A077EDF1F48A4770013E4FC /* extensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = extensions.swift; sourceTree = "<group>"; };
 		8A5AACC11F64C2870083CA62 /* SchedulingPageViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SchedulingPageViewController.swift; sourceTree = "<group>"; };
+		8ABCF2B51F65E024002FB350 /* INeedToViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = INeedToViewController.swift; sourceTree = "<group>"; };
+		8ABCF2B71F65E041002FB350 /* SometimeViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SometimeViewController.swift; sourceTree = "<group>"; };
+		8ABCF2B91F65E0B4002FB350 /* WhenViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WhenViewController.swift; sourceTree = "<group>"; };
+		8ABCF2BB1F65E0D5002FB350 /* ItWillTakeViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ItWillTakeViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -59,6 +67,10 @@
 				8A077ECC1F48A2F30013E4FC /* AppDelegate.swift */,
 				8A077EDF1F48A4770013E4FC /* extensions.swift */,
 				8A5AACC11F64C2870083CA62 /* SchedulingPageViewController.swift */,
+				8ABCF2B51F65E024002FB350 /* INeedToViewController.swift */,
+				8ABCF2B71F65E041002FB350 /* SometimeViewController.swift */,
+				8ABCF2B91F65E0B4002FB350 /* WhenViewController.swift */,
+				8ABCF2BB1F65E0D5002FB350 /* ItWillTakeViewController.swift */,
 				8A077EDE1F48A35E0013E4FC /* Supporting Files */,
 			);
 			path = schedyouler;
@@ -102,7 +114,7 @@
 			isa = PBXProject;
 			attributes = {
 				LastSwiftUpdateCheck = 0820;
-				LastUpgradeCheck = 0820;
+				LastUpgradeCheck = 0920;
 				ORGANIZATIONNAME = "divine ikenna";
 				TargetAttributes = {
 					8A077EC81F48A2F30013E4FC = {
@@ -148,8 +160,12 @@
 			buildActionMask = 2147483647;
 			files = (
 				8A077ECD1F48A2F30013E4FC /* AppDelegate.swift in Sources */,
+				8ABCF2B61F65E024002FB350 /* INeedToViewController.swift in Sources */,
+				8ABCF2BA1F65E0B4002FB350 /* WhenViewController.swift in Sources */,
 				8A5AACC21F64C2870083CA62 /* SchedulingPageViewController.swift in Sources */,
+				8ABCF2BC1F65E0D5002FB350 /* ItWillTakeViewController.swift in Sources */,
 				8A077EE01F48A4770013E4FC /* extensions.swift in Sources */,
+				8ABCF2B81F65E041002FB350 /* SometimeViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -184,7 +200,9 @@
 				CLANG_CXX_LIBRARY = "libc++";
 				CLANG_ENABLE_MODULES = YES;
 				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
 				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
 				CLANG_WARN_CONSTANT_CONVERSION = YES;
 				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
 				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
@@ -192,7 +210,11 @@
 				CLANG_WARN_ENUM_CONVERSION = YES;
 				CLANG_WARN_INFINITE_RECURSION = YES;
 				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
 				CLANG_WARN_SUSPICIOUS_MOVE = YES;
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
@@ -234,7 +256,9 @@
 				CLANG_CXX_LIBRARY = "libc++";
 				CLANG_ENABLE_MODULES = YES;
 				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
 				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
 				CLANG_WARN_CONSTANT_CONVERSION = YES;
 				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
 				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
@@ -242,7 +266,11 @@
 				CLANG_WARN_ENUM_CONVERSION = YES;
 				CLANG_WARN_INFINITE_RECURSION = YES;
 				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
 				CLANG_WARN_SUSPICIOUS_MOVE = YES;
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
@@ -273,6 +301,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = schedyouler/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.schedyouler.schedyouler;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -285,6 +314,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = schedyouler/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.schedyouler.schedyouler;
 				PRODUCT_NAME = "$(TARGET_NAME)";
